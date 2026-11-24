@@ -15,8 +15,15 @@
 
 //Console.WriteLine(sum);
 
-int bound = 2000;
-Console.WriteLine($"Gauss Amount for { bound } = { GaussAmount(bound) }");
+//int bound = 2000;
+//Console.WriteLine($"Gauss Amount for { bound } = { GaussAmount(bound) }");
+
+int a = 45;
+int b = 31;
+char sign = '+';
+
+int result = Calc(a, b, sign);
+Console.WriteLine(result);
 
 
 void SayName(string sayWord)
@@ -36,29 +43,28 @@ void Func(int value)
     value = 1000;
 }
 
+
+
 int Sum(int left, int right)
 {
     int result = left + right;
     return result;
 }
-
 int Mult(int left, int right)
 {
     return left * right;
 }
-
 int Sub(int left, int right)
 {
     return left - right;
 }
-
 int Calc(int left, int right, char sign)
 {
     int result = 0;
 
     switch(sign)
     {
-        case '+': 
+        case '+':
             result = Sum(left, right); 
             break;
         case '-':
@@ -71,8 +77,6 @@ int Calc(int left, int right, char sign)
 
     return result;
 }
-
-
 int GaussAmount(int maxNumber)
 {
     int amount = 0;
@@ -81,14 +85,11 @@ int GaussAmount(int maxNumber)
     return amount;
 }
 
-
-
-
 void PrintInfo(string name, int age)
 {
     string nameInfo = $"Имя: {name}";
     int length = nameInfo.Length;
 
     PrintStars(length + 4);
-    
 }
+
